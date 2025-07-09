@@ -1,5 +1,4 @@
 import string
-import re
 
 def encryptor():
     #set alphabets
