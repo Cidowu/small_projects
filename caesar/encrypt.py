@@ -29,7 +29,7 @@ def encryptor():
         
         if char in punctuation:
             #shift upper case letters
-            shifted_index = (punctuation.index(char) + shift) % 33
+            shifted_index = (punctuation.index(char) + shift) % 33 #the length of punctuation is 33 (including space)
             encrypted_text += punctuation[shifted_index]
     print(f"{user_text} -> {encrypted_text}")
 
@@ -51,7 +51,7 @@ def decryptor(encrypted, shift):
             decrypted_text += lower_case[shifted_index]
         if char in punctuation:
             #shift punctuation back
-            shifted_index = (punctuation.index(char) - shift) % 33
+            shifted_index = (punctuation.index(char) - shift) % 33 #the length of punctuation is 33 (including space)
             decrypted_text += punctuation[shifted_index]
     return f"{encrypted} -> {decrypted_text}"
 
